@@ -1,0 +1,55 @@
+<div class="modal-header">
+  <button type="button" onclick="myFunction()" class="close" >×</button>
+  <h4 class="modal-title">Ajouter une nouvelle doléance </h4>
+</div>
+    <form action="{%  url 'creerarticle' %}" method="POST" enctype="multipart/form-data">
+
+      {% csrf_token %}
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="field-1" class="control-label">Titre</label>
+              {{ form.titre }}
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="field-1" class="control-label">Categorie</label>
+              {{ form.categorie }}
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="field-1" class="control-label">pseudo</label>
+              {{ form.pseudo }}
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="field-1" class="control-label">contenu</label>
+              {{ form.contenu }}
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="field-1" class="control-label">photo</label>
+              {{ form.photo }}
+            </div>
+          </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <input class="btn btn-success " value="Enregistrer" type="submit">
+        <button type="button"id="btn1" onclick="myFunction()"class="btn btn-default waves-effect" >Annuler</button>
+
+      </div>
+    </form>
+    {% block js %}
+    <script>
+    function myFunction() {
+      window.location.replace("{% url 'accueil' %}");
+    }
+    </script>
+    {% endblock %}
