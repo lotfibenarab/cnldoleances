@@ -22,7 +22,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 SECRET_KEY = 'jey=j%**gspa#!xr-7*q@5xyjr)+_p@ar+ugrirv2p59&xb--9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'cnldoleances.herokuapp.com']
 
