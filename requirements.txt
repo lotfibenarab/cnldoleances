@@ -2,6 +2,7 @@ Babel==2.5.1
 certifi==2017.7.27.1
 chardet==3.0.4
 data-importer==3.0.2
+dj-database-url==0.4.2
 Django==1.11.1
 django-captcha==1.0.0
 django-crispy-forms==1.6.1
