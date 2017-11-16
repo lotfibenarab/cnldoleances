@@ -10,7 +10,7 @@ class Article(models.Model):
     is_visible = models.BooleanField(verbose_name="Article publié ?",
                                      default=True)
     categorie = models.ForeignKey('Categorie')
-    photo = models.ImageField(validators=[FileExtensionValidator(allowed_extensions=['png','jpeg','jpg'])],blank=True)
+    photo = models.ImageField(upload_to='crepes/staticfiles/photos/', validators=[FileExtensionValidator(allowed_extensions=['png','jpeg','jpg'])],blank=True)
 
     """ méthodes pour recuperer tous les commentaires visibles """
     def comment_list(self):
